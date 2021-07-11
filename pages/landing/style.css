@@ -1,0 +1,1842 @@
+
+html {
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+body {
+    font-family: 'MontserratRegular';
+    font-size: 18px;
+    line-height: 150%;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.title {
+    font-family: 'MontserratSemiBold';
+    font-size: 54px;
+    line-height: 66px;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0;
+}
+
+.title_green {
+    color: #00a092;
+}
+
+.subtitle {
+    margin: 0;
+    font-family: 'MontserratMedium';
+    font-size: 26px;
+    line-height: 130%;
+    color: #fff;
+}
+
+.text_white {
+    color: #fff;
+}
+
+.text_black {
+    font-family: 'MontserratMedium';
+    font-size: 26px;
+    line-height: 130%;
+    color: #000;
+}
+
+
+.btn {
+    font-family: 'MontserratSemiBold';
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    background: transparent;
+    color: #fff;
+    border: solid 1px #f58021;
+    border-radius: 5px;
+    background-image: url(../../assets/landing-assets/icons/white-vector.png);
+    background-repeat: no-repeat;
+    background-position-y:center;
+}
+
+.btn:hover {
+    transition: .1s linear;
+    cursor: pointer;
+}
+
+.favourite_btn {
+    margin: 0 auto 150px;
+    display: block;
+    background: transparent;
+    padding: 26px 70px 26px 35px;
+    color: #20113d;
+    border: solid 1px #20113d;
+    background-image: url(../../assets/landing-assets/icons/purple-vector.png);
+    background-repeat: no-repeat;
+    background-position-x: 299px;
+    background-position-y:center;
+}
+
+.favourite_btn:hover {
+    background-color: #20113d;
+    border: solid 1px #fff;
+    color: #fff;
+    background-image: url(../../assets/landing-assets/icons/white-vector.png);
+}
+
+.card_link {
+    font-family: 'MontserratSemiBold';
+    color: #f58021;
+    line-height: 22px;
+    text-transform: uppercase;
+    padding: 26px 45px;
+    background: url(../../assets/landing-assets/icons/card-link.png);
+    background-repeat: no-repeat;
+    background-position-y: center;
+}
+
+/* Header start */
+
+header {
+    background-color: #f58021;
+    z-index: 1;
+}
+
+.header__iner {
+    height: 110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.header__burger {
+    display: none;
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+.header__burger:hover {
+    cursor: pointer;
+}
+
+.header__burger span,
+.header__burger span::after,
+.header__burger span::before {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 2.5px;
+    background-color: #000;
+}
+
+.header__burger span::before,
+.header__burger span::after {
+    content: '';
+    transition: 0.5s;
+}
+
+.header__burger span::before {
+    transform: translateY(-10px);
+}
+
+.header__burger span::after {
+    transform: translateY(10px);
+}
+
+.header__burger_active span{
+    height: 0;
+}
+
+.header__burger_active span::before{
+    transform: rotate(45deg);
+}
+
+.header__burger_active span::after{
+    transform: rotate(-45deg);
+}
+
+.logo_link {
+    margin-top: 10px;
+}
+
+.header__links {
+    display: flex;
+    align-items: center;
+}
+
+.header__nav {
+    font-family: 'MontserratSemiBold';
+    text-transform: uppercase;
+    margin-right: 67px;
+}
+
+.nav_link {
+    color: #fff;
+    margin-right: 48px;
+}
+
+.nav_link:last-child {
+    margin-right: 0px;
+}
+
+.zoous_link {
+    margin-right: 40px;
+}
+
+.contact_link {
+    margin-right: 40px;
+}
+
+.activ_page {
+    color: #00a092;
+    pointer-events: none;
+}
+
+.soc_networks {
+    margin-top: 12px;
+}
+
+.network {
+    margin-right: 25px;
+}
+
+.network:last-child {
+    margin-right: 0;
+}
+
+/* Header end */
+
+/* Intro start */
+
+.intro {
+    margin-bottom: 150px;
+    display: flex;
+    height: 790px;
+    flex-direction: column;
+    justify-content: center;
+    background: url(../../assets/landing-assets/images/intro-bg.jpg) center top no-repeat;
+}
+
+.intro__title {
+    max-width: 890px;
+    margin-bottom: 50px;
+    font-family: 'MontserratExtraBold';
+    text-transform: uppercase;
+    font-size: 82px;
+    line-height: 100px;
+    letter-spacing: 0.01em;
+    color:#00a092;
+}
+
+.intro__subtitle {
+    margin-bottom: 50px;
+    max-width: 430px;
+}
+
+.intro__btn {
+    display: block;
+    width: 240px;
+    padding: 26px;
+    background-color: #f58021;
+    border: solid #f58021;
+    background-position-x: 185.86px;
+}
+
+.intro__btn:hover {
+    background-color: #d26004;
+    border: solid #d26004;
+    transition: .1s linear;
+}
+
+/* Intro end */
+
+/* Welcome start */
+
+.welcom__row {
+    margin-bottom: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.welcom__text {
+    max-width: 584px;
+    padding-left: 24px;
+}
+
+.welcom__title {
+    margin-bottom: 64px;
+}
+
+/* Welcome end */
+
+/* Donation start */
+
+.donation{
+    background-color: #20113d;
+    margin-bottom: 136px;
+}
+
+.donation__inner {
+    height: 221px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.donation__text {
+    max-width: 889px;
+}
+
+.donation__title {
+    margin-bottom: 20px;
+    font-family: 'MontserratMedium';
+    color: #fff;
+    font-size: 42px;
+    line-height: 51px;
+    text-transform: uppercase;
+}
+
+.donation__description {
+    max-width: 609px;
+    color: #fff;
+}
+
+.donation__btn_title {
+    margin: 0 0 10px 0;
+}
+
+.donation__form {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 320px;
+    margin: 0 auto;
+}
+
+.donation__input {
+    background: transparent;
+    border: 1px solid #fff;
+    border-right: #f58021;
+    border-radius: 5px 0 0 5px;
+    width: 246px;
+    height: 74px;
+    padding-left: 15px;
+    line-height: 27px;
+    font-family: 'MontserratSemiBold';
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.donation__send {
+    background: #f58021;
+    border: 1px solid #fff;
+    border-left: #f58021;
+    border-radius: 0 5px 5px 0;
+    width: 74px;
+    height: 74px;
+    background-image: url(../../assets/landing-assets/icons/white-vector.png);
+    background-repeat: no-repeat;
+    background-position:center
+}
+
+.donation__send:hover {
+    background-color: #d26004;
+    transition: .1s linear;
+    cursor: pointer;
+}
+
+/* Donation end */
+
+/* Animal start */
+
+.animals__title {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.animal__text {
+    text-align: center;
+    max-width: 920px;
+    margin: 0 auto 50px;
+}
+
+.scrolling {
+    display: flex;
+    justify-content: space-between;
+    width: 185px;
+    margin: 0 auto 50px;
+}
+
+.scrolling__btn {
+    background: transparent;
+    border: 0;
+}
+
+
+.list_cards__row {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.animals__card {
+    width: 440px;
+    height: 747px;
+    flex: 0 0 440px;
+    background: #20113d;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    margin-right:40px;
+    transition: 0.5s ease;
+}
+
+.animals__card:last-child {
+    margin: 0;
+}
+
+.animals__card:hover {
+    box-shadow: 0px 4px 30px #00A092;
+    transform: scale(1.08);
+    cursor: pointer;
+  }
+
+.card__name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #20113d;
+    padding: 12px 20px;
+    border-radius: 5px 0px;
+}
+
+.card__img {
+    margin-bottom: 30px;
+    border-radius: 5px 5px 0 0;
+}
+
+.card__title {
+    margin-bottom: 10px;
+}
+
+.card__text {
+    max-width: 351px;
+    margin: 0 auto 30px;
+}
+
+.animals__card_link {
+    background-position-x: 184px;
+    padding: 25px 66px 25px 28px;
+    position: absolute;
+    left: calc(50% - 240px/2);
+    bottom: 50px;
+}
+
+.care__img {
+    max-width: 100%;
+}
+
+/* Animal end */
+
+/* Feeding start */
+
+.feeding {
+    background: #20113d;
+}
+
+.feeding__title {
+    margin-bottom: 100px;
+    padding-top: 91px;
+}
+
+.feeding__row {
+    display: flex;
+    padding-bottom: 100px;
+}
+
+.feeding__img {
+    max-width: 560px;
+    max-height: 364px;
+    margin-right: 160px;
+    border-radius: 10px;
+}
+
+.feeding__icon {
+    margin-bottom: 30px;
+}
+
+.feeding__subtitle {
+    margin-bottom: 50px;
+}
+
+.donate_now_btn {
+    margin-top: 50px;
+    background-color: #f58021;
+    padding: 26px 70px 26px 35px;
+    border: solid 1px #f58021;
+    background-position-x: 180px;
+}
+
+.donate_now_btn:hover {
+    background-color: #d26004;
+    border: solid 1px #d26004;
+}
+
+.row__border {
+    display: flex;
+    align-items: center;
+    margin-bottom: 82px;
+}
+
+.row__number {
+    margin-right: 93px;
+}
+
+.row__horizontal_line {
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+}
+
+/* Feeding end */
+
+/* Feedback start */
+
+.feedback {
+    background-color: #20113d;
+    background-image: url(../../assets/landing-assets/images/feedback-bg.jpg);
+    background-size: cover;
+}
+
+.feedback__inner {
+    display: flex;
+    position: relative;
+    width: 1920px;
+    height: 1730px;
+}
+
+.feedback__comments {
+    max-width: 1060px;
+}
+
+.feedback__description {
+    width: 560px;
+    margin-right: 40px;
+}
+
+.feedback__title {
+    max-width: 440px;
+}
+
+.feedback__text {
+    font-size: 26px;
+    line-height: 130%;
+}
+
+.comments__row {
+    display: flex;
+}
+
+.comment {
+    background: #fff;
+    width: 515px;
+    padding: 20px 50px 70px;
+    margin: 0 30px 30px 0;
+    border-radius: 5px;
+}
+
+.comment:last-child {
+    margin-right: 0;
+}
+
+.comment__quotation_icon {
+    margin-bottom: 20px;
+    font-family: 'MontserratExtraBold';
+    text-transform: uppercase;
+    font-size: 120px;
+    line-height: 146px;
+    letter-spacing: 0.01em;
+    color:#00a092;
+}
+
+.comment_adress {
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.comment__text {
+    margin-bottom: 46px;
+}
+
+.comment__name {
+    line-height: 22px;
+    text-transform: uppercase;
+}
+
+.feedback__scrolling {
+    margin-top: 50px;
+}
+
+.btn_prev {
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.scrolling_btn {
+    background: url(../../assets/landing-assets/icons/white-vector.png) center no-repeat;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+.scrolling_btn:hover {
+    cursor: pointer;
+    background-color: #fff;
+    background-image: url(../../assets/landing-assets/icons/purple-vector.png);
+}
+
+.btn_purple {
+    background: url(../../assets/landing-assets/icons/purple-vector.png) center no-repeat;
+    background-color: #fff;
+    border: 1px solid #20113d;
+}
+
+.btn_purple:hover {
+    background-color: #20113d;
+    background-image: url(../../assets/landing-assets/icons/white-vector.png);
+}
+
+.feedback_btn {
+    position: absolute;
+    bottom: 104px;
+    display: block;
+    padding: 26px 111px 26px 77px;
+    color: #fff;
+    border: solid 1px #fff;
+    background-position-x: 257px;
+}
+
+.feedback_btn:hover {
+    background-color: #00a092;
+}
+/* Feedback end */
+
+/* Care start*/
+
+.care {
+    text-align: center;
+    padding-top: 182px;
+}
+
+.care__title {
+    margin: 0 auto;
+    width: 655px;
+    margin-bottom: 50px;
+}
+
+.care__text {
+    width: 537px;
+    margin: 0 auto 100px;
+    color: #20113d;
+}
+
+.care__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.content__img {
+    max-width: 920px;
+    max-height: 658px;
+    margin: 0 40px 40px 0;
+}
+
+.care__card {
+    width: 440px;
+    height: 658px;
+    background-color: #20113d;
+    margin: 0 40px 40px 0;
+    text-align: center;
+    position: relative;
+    transition: 0.5s ease;
+    border-radius: 5px;
+}
+
+.care__card:nth-child(2) {
+    margin-right: 0;
+}
+
+.care__card:nth-child(5) {
+    margin-right: 0;
+}
+
+.care__card:hover {
+    box-shadow: 0px 4px 30px #00A092;
+    transform: scale(1.08);
+    cursor: pointer;
+  }
+
+.card__img {
+    border-radius: 5px 5px 0 0;
+}
+
+.care__card_text {
+    padding: 0 25px;
+    margin-bottom: 50px;
+}
+
+.care__card_link {
+    position: absolute;
+    bottom: 50px;
+    left: calc(50% - 142px/2);
+    padding: 26px 62px 26px 28px;
+    background-position-x: 89px;
+}
+
+.care__slider {
+    display: none;
+}
+
+.slider__btn:first-child {
+    background-color: #000;
+}
+
+.care_favourite_btn {
+    margin: 0 auto 100px;
+}
+
+.care_favourite_btn {
+    margin: 100px auto 150px;
+}
+
+.care__image_container {
+    margin-bottom: 150px;
+}
+
+/* Care end*/
+
+/* Footer start */
+
+.footer {
+    background: #20113d;
+}
+
+.footer__top {
+    margin-bottom: 37px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 71px 0 66px 0;
+    border-bottom: 1px solid #fff;
+}
+
+.footer__logos_list {
+    margin-right: 35px;
+}
+
+.footer__logo {
+    margin-right: 65px;
+}
+
+.footer__logo:last-child {
+    margin-right: 0px;
+}
+
+.footer__nav {
+    font-family: 'MontserratSemiBold';
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.footer__donate {
+    padding: 26px 68px 26px 33px;
+    color: #fff;
+    border: solid 1px #fff;
+    background-position-x: 300px;
+}
+
+.footer__donate:hover {
+    background-color: #00a092;
+    cursor: pointer;
+}
+
+.footer__nav_link {
+    color: #fff;
+    margin-right: 46px;
+}
+
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.copyright__list {
+    display: flex;
+}
+
+.copyright_item {
+    margin-right: 50px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.copyright_item:last-child {
+    margin-right: 0;
+}
+
+.footer__network {
+    margin-right: 35px;
+}
+
+.footer__network:last-child {
+    margin-right: 0px;
+}
+/* Footer end */
+
+
+/* Popup start */
+
+.popup {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    z-index: 100;
+    overflow: hidden;
+    background-color: rgba(0,0,0,.5);
+}
+
+.popup__inner {
+    max-width: 1160px;
+    height: 815px;
+    background-color: #fff;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+
+
+.img__container {
+    margin-bottom: 20px;
+}
+
+.poup__title {
+    color: #f58021;
+    max-width: 680px;
+    margin: 0 auto 30px;
+}
+
+.popup__text {
+    width: 570px;
+    margin: 0 auto 50px;
+}
+
+.donation_amount_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 80px;
+}
+
+.donation_amount {
+    display: block;
+    width: 120px;
+    height: 65px;
+    color: #fff;
+    background-color: #00a092;
+    border: #00a092 solid;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.donation_amount:hover {
+    cursor: pointer;
+}
+
+.donation_other {
+    width: 200px;
+}
+
+.popup__close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 60px;
+    color: #fff;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* Popup end */
+
+/* Donation step 1 start */
+
+.donation_popup input {
+    height: 65px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.donation_popup option {
+    text-align: center;
+}
+
+.donation_popup {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    z-index: 100;
+    overflow: hidden;
+    background-color: rgba(0,0,0,.5);
+}
+
+.donation_popup__inner {
+    max-width: 920px;
+    background-color: #fff;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.donation_1__inner {
+    height: 750px;
+}
+
+.donation_popup__header {
+    display: flex;
+    align-items: center;
+    height: 135px;
+    background-color: #f58021;
+    margin-bottom: 50px;
+}
+
+.donation_popup__title {
+    font-family: 'MontserratMedium';
+    font-size: 42px;
+    line-height: 51px;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 auto;
+}
+
+.donation_popup__information {
+    display: flex;
+    flex-direction: column;
+}
+
+.information__subtitle {
+    font-family: 'MontserratSemiBold';
+    font-size: 18px;
+    line-height: 150%;
+    border-bottom: 1px solid #a4a8ae;
+    padding-left: 120px;
+    margin: 0 0 40px;
+}
+
+.donation_popup_menu {
+    padding: 0 120px;
+}
+
+.donation_popup_menu__amount_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.green_btn {
+    display: block;
+    height: 65px;
+    background-color: #80cfc8;
+    border: #80cfc8 solid;
+    border-radius: 5px;
+    font-family: 'MontserratSemiBold';
+    color: #fff;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+}
+
+.green_btn:hover {
+    cursor: pointer;
+}
+
+.green_btn_activ {
+    background-color: #00a092;
+    border: #00a092 solid;
+}
+
+.donation__popup_menu__other_amount {
+    margin-bottom: 40px;
+}
+
+.donation_popup__amount {
+    width: 80px;
+    margin-bottom: 40px;
+}
+
+.other_amount__form {
+    display: flex;
+}
+
+.other_amount__btn {
+    width: 200px;
+    margin-right: 40px;
+}
+
+.other_amount__btn:hover {
+    cursor: pointer;
+}
+
+.green_btn_activ:hover {
+    cursor: auto;
+}
+
+.other_amount__input {
+    width: 200px;
+    height: 65px;
+}
+
+.donation_menu__special_form {
+    display: flex;
+}
+
+.special_form__btn {
+    width: 200px;
+    margin-right: 40px;
+}
+
+
+.donation_popup select {
+    height: 65px;
+    border: solid 1px #000;
+    border-radius: 5px;
+}
+
+#favourite {
+    width: 440px;
+}
+
+.donation_popup_menu__subscription {
+    display: flex;
+    align-items: center;
+}
+
+.donation_popup_menu__subscription input {
+    margin-right: 20px;
+    width: 30px;
+    height: 30px;
+}
+
+.donation_popup__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.donation_popup__step {
+    display: flex;
+    justify-content: space-between;
+    width: 50px;
+}
+
+.donation_popup__step div {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border: 1px solid #00a092;
+    border-radius: 50%;
+}
+
+.solid {
+    background-color: #00a092
+}
+
+.donation_popup__next_btn {
+    width: 200px;
+    height: 75px;
+    background-color: #00a092;
+    border: 1px solid #00a092;
+    margin-right: 105px;
+}
+
+
+/* Donation step 1 end */
+
+/* Donation step 2 start */
+.donation_2__inner {
+    height: 750px;
+}
+
+.input_fullname {
+    width: 680px;
+    margin-bottom: 50px;
+}
+
+.input_email {
+    width: 680px;
+    margin-bottom: 10px;
+}
+
+.donation_popup_menu__subtitle {
+    margin: 0 0 10px;
+}
+
+.donation_popup_menu__subtitle::before {
+    content: '* ';
+    color: #00a092;
+}
+
+.donation_2__description {
+    margin: 0 0 50px;
+}
+
+.donation_popup__back_btn {
+    font-family: 'MontserratSemiBold';
+    color: #00a092;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    line-height: 150%;
+    text-decoration-line: underline;
+}
+
+.donation_popup__back_btn:hover {
+    cursor: pointer;
+}
+
+/* Donation  step 2  end */
+
+
+/* Donation  step 3  start */
+
+.donation_3__inner {
+    height: 700px;
+}
+
+.donation_3__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.donation_3__row:last-child {
+    margin-bottom: 100px;
+}
+
+.donation_3__row_item {
+    margin-right: 40px;
+}
+
+.donation_3__row_item:last-child {
+    margin-right: 0;
+}
+
+.input_card_number {
+    width: 440px;
+}
+
+.input_cvv_number {
+    width: 200px;
+}
+
+#month {
+    width: 200px;
+    text-align-last: center;
+}
+
+#year {
+    margin-top: auto;
+    width: 200px;
+    text-align-last: center;
+}
+
+.donation_popup__complete_btn {
+    background-color: #f58021;
+    padding: 26px 90px 26px 55px;
+    border: solid 1px #f58021;
+    background-position-x: 280px;
+}
+
+/* Donation  step 3  end */
+
+
+.show {
+    display: block;
+}
+
+
+/* Adaptiv start*/
+
+@media screen and (max-width:1200px) {
+    .container {
+        max-width: 1200px;
+    }
+
+    .header__iner {
+        padding: 0 100px;
+    }
+
+    .header__nav {
+        margin-right: 80px;
+    }
+
+    .nav_link {
+        margin-right: 25px;
+    }
+
+    .intro {
+        padding-left: 40px;
+        margin-bottom: 100px;
+    }
+
+    .intro__title {
+        margin-bottom: 30px;
+    }
+
+    .intro__subtitle {
+        width: 340px;
+        margin-bottom: 30px;
+    }
+    
+    .welcom__row {
+        margin: 0 0 50px 100px;
+        flex-direction: column;
+        max-width: 660px;
+    }
+
+    .right_row {
+        margin: 0 100px 100px auto;
+    }
+
+    .welcom__text {
+        order: 1;
+    }
+
+    .welcom__title {
+        margin-bottom: 30px;
+    }
+
+    .welcome_img {
+        order: 0;
+        max-width: 660px;
+        margin-bottom: 30px;
+    }
+
+    .donation {
+        margin-bottom: 100px;
+        padding: 50px 0;
+    }
+
+    .donation__inner {
+        padding: 0 100px;
+    }
+
+    .donation__text {
+        max-width: 575px;
+    }
+    
+    .animals__title {
+        margin-bottom: 30px;
+    }
+
+    .animal__text {
+        max-width: 830px;
+        margin-bottom: 100px;
+    }
+
+    .animals__slider {
+        margin-bottom: 50px;
+        overflow: hidden;
+    }
+
+    .scrolling {
+        margin-bottom: 30px;
+    }
+
+    .list_cards__row {
+        margin-bottom: 20px;
+        overflow: visible;
+    }
+
+    .feeding__inner {
+        padding: 0 40px;
+    }
+
+    .feeding__row {
+        align-items: center;
+        padding-bottom: 80px;
+    }
+    
+    .feeding__img {
+        margin-right: 20px;
+    }
+
+    .feeding__row:last-child .feeding__img {
+        margin-bottom: auto;
+    }
+
+    .feeding__row:last-child {
+        padding-bottom: 200px;
+    }
+
+    .donate_now_btn {
+        margin-top: 118px;
+    }
+
+    .feeding__conten {
+        text-align: center;
+    }
+
+    .feeding__subtitle {
+        margin-bottom: 30px;
+    }
+
+    .donate_now_btn {
+        display: block;
+        margin-right: auto;
+    }
+
+    .feedback__inner {
+        flex-direction: column;
+        width: 1200px;
+        height: 1900px;
+    }
+
+    .feedback__description {
+        margin-left: 40px;
+    }
+
+    .feedback__text {
+        max-width: 577px;
+    }
+
+    .feedback__comments {
+        margin-left: auto;
+    }
+    
+    .scrolling__comment {
+        display: flex;
+        justify-content: space-between;
+        margin: 70px 40px 0 auto;
+        width: 180px;
+    }
+
+    .feedback_btn {
+        left: 135px;
+        bottom: 150px;
+    }
+
+    .care {
+        padding-top: 150px;
+    }
+
+    .care__title {
+        margin-bottom: 30px;
+    }
+
+    .care__text {
+        margin-bottom: 50px;
+    }
+
+    .care__content {
+        margin-bottom: 60px;
+    }
+    
+    .content__img {
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    .card__img {
+        width: 100%;
+    }
+
+    .animals__list_cards {
+        margin-left: 40px;
+    }
+
+    .animals__card {
+        margin-right: 20px;
+    }
+    .care__card:nth-child(2) {
+        margin-right: 40px;
+    }
+    
+    .care__card:nth-child(3) {
+        margin-right: 0;
+    }
+
+    .care__card:last-child {
+        margin-right: 0;
+    }
+
+    .footer__top {
+        padding: 70px 40px;
+    }
+
+    .footer__logos_list {
+        margin-right: 15px;
+    }
+
+    .footer__logo {
+        margin-right: 25px;
+    }
+
+    .footer__nav_link {
+        margin-right: 15px;
+    }
+
+    .footer__bottom {
+        padding: 0 40px 35px;
+    }
+}
+
+@media screen and (max-width:640px) {
+
+    .container {
+        max-width: 640px;
+    }
+
+    .header {
+        position: fixed;
+        width: 100%;
+    }
+
+    .header__iner {
+        padding: 0;
+        padding: 0 20px;
+    }
+
+    .header__burger {
+        display: block;
+    }
+
+    .soc_networks {
+        display: none;
+    }
+
+    .header__nav {
+        display: none;
+    }
+
+    .intro {
+        background-size: 110%;
+        background-position: bottom;
+        background-position-x: -5px;
+        padding-top: 110px;
+        padding-left: 20px;
+        flex-direction: row;
+        height: 645px;
+        margin-bottom: 100px;
+    }
+
+    .intro__title {
+        font-size: 72px;
+        line-height: 88px;
+        letter-spacing: 0.01em;
+        margin-bottom: 30px;
+        padding-top: 50px;
+    }
+
+    .intro__subtitle {
+        margin: 0 0 30px 0;
+    }
+
+    .welcom__row {
+        margin: 0 0 50px 0;
+    }
+    .welcome_img {
+        width: 100%;
+    }
+
+    .donation__inner {
+        flex-direction: column;
+        padding: 0 20px;
+        height: auto;
+    }
+
+    .donation__text {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .donation__title {
+        margin-bottom: 30px;
+    }
+
+    .donation__description {
+        margin: 0;
+    }
+
+    .donation__sending {
+        text-align: center;
+    }
+
+    .animals__title {
+        width: 395px;
+        margin: 0 auto;
+    }
+
+    .animal__text {
+        padding: 0 20px;
+        margin-bottom: 50px;
+    }
+
+    .scrolling {
+        display: none;
+    }
+
+    .animals__card {
+        max-width: 290px;
+        height: 600px;
+    }
+
+    .card__img {
+        margin-bottom: 15px;
+        height: 330px;
+        object-fit: cover;
+    }
+
+    .card__title {
+        margin-bottom: 15px;
+    }
+
+    .card__text {
+        padding: 0 25px;
+    }
+
+    .animals__card_link {
+        bottom: 10px;
+    }
+
+    .animals__list_cards {
+        display: flex;
+    }
+
+    .list_cards__row:first-child {
+        display: none;
+    }
+
+    .list_cards__row:last-child .animals__card:first-child {
+        display: none;
+    }
+
+    .favourite_btn {
+        margin-bottom: 100px;
+    }
+
+    .feeding__inner {
+        text-align: center;
+        padding: 0;
+    }
+
+    .feeding__title {
+        padding-top: 80px;
+        margin-bottom: 50px;
+    }
+
+    .row__border {
+        margin-bottom: 50px;
+        padding: 0 20px;
+    }
+
+    .row__number {
+        margin-right: 10px;
+    }
+
+    .feeding__row {
+        flex-direction: column;
+        padding-bottom: 50px;
+    }
+
+    .feeding__row:last-child {
+        padding-bottom: 80px;
+    }
+
+    .feeding__img {
+        margin-right: 0;
+        min-width: 100%;
+        max-width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .feeding__row:last-child .feeding__img {
+        margin-bottom: 50px;
+    }
+
+    .feeding__text {
+        padding: 0 20px;
+    }
+
+    .donate_now_btn {
+        margin: 50px auto 0;
+    }
+
+    .feedback {
+        background-size: 230%;
+        background-position-x: left;
+        background-position-y: bottom;
+        background-repeat: no-repeat;
+    }
+
+    .feedback__inner {
+        max-width: 640px;
+        height: 1670px;
+        overflow: hidden;
+        padding-left: 20px;
+    }
+
+    .feedback__title {
+        padding-top: 80px;
+    }
+
+    .feedback__description {
+        margin: 0;
+    }
+
+    .feedback__text {
+        max-width: 580px;
+    }
+
+    .feedback__comments {
+        display: flex;
+    }
+
+    .comment {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        padding: 50px 30px;
+    }
+
+    .comment_adress {
+        width: 289px;
+        height: 70px;
+        padding-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .comment__quotation_icon {
+        height: 70px;
+    }
+
+    .comment__name {
+        margin: 0 auto;
+    }
+
+    .comment__text {
+        margin: 0 0 45px 0;
+    }
+
+    .feedback_btn {
+        bottom: 750px;
+        left: 20px;
+    }
+    
+    .care {
+        padding-top: 80px;
+    }
+
+    .care__text {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .care__content {
+        margin-bottom: 50px;
+    }
+
+    .content__img {
+        display: none;
+    }
+
+    .care__card {
+        display: none;
+    }
+
+    .care__card:nth-child(2) {
+        display: flex;
+        width: 600px;
+        max-height: 300px;
+        margin: 0 auto 50px;
+    }
+
+    .care__card_text {
+        margin: 0 auto;
+        padding-top: 65px;
+    }
+
+    .care__card .card__img {
+        max-width: 50%;
+        max-height: 100%;
+        object-fit: cover;
+        object-position: right;
+        border-radius: 5px 0 0 5px;
+    }
+
+    .care__card_link {
+        left: calc(50% - 142px/2 + 150px);
+    }
+
+    .care__slider {
+        display: flex;
+        width: 95px;
+        height: 8px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .slider__btn {
+        display: block;
+        width: 8px;
+        height: 8px;
+        padding: 0;
+        border: 1px solid #000;
+        border-radius: 4px;
+        background-color: transparent;
+    }
+    
+    .slider__btn:first-child {
+        background-color: #000;
+    }
+
+    .care__image_container {
+        height: 380px;
+        margin-bottom: 100px;
+    }
+
+    .care__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: left;
+    }
+
+    .footer__top {
+        padding: 0 20px;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 50px 100px;
+    }
+
+    .footer__logos_list {
+        margin: 0 auto 50px;
+    }
+
+    .footer__nav {
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .footer__nav_link {
+        margin: 0;
+        display: block;
+    }
+
+    .footer__bottom {
+        padding: 0 20px;
+        flex-flow: wrap;
+        margin: 0 auto;
+        justify-content: center;
+        padding: 50px 100px;
+    }
+
+    .copyright__list {
+        order: 1;
+    }
+    .copyright_item {
+        margin: 0;
+    }
+
+    .footer__soc_networks {
+        order: 0;
+        margin-bottom: 30px;
+    }
+    
+    .copyright__list {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .popup__inner {
+        max-width: 600px;
+        min-height: 645px;
+    }
+
+    .img__container {
+        height: 165px;
+    }
+
+    .poup__title {
+        margin: 0 auto 20px;
+        max-width: 485px;
+        font-family: 'MontserratMedium';
+        font-size: 42px;
+        line-height: 51px;
+    }
+
+    .popup__text {
+        margin: 0 auto 20px;
+        max-width: 485px;
+    }
+
+    .img__container img {
+        object-fit: cover;
+        object-position: bottom;
+        width: 100%;
+        max-height: 100%;
+    }
+
+    .donation_amount {
+        margin: 0 0 40px 0;
+        width: 135px;
+    }
+
+    .donation_other {
+        margin: 0;
+        width: 135px;
+    }
+
+
+
+}
+/* Adaptiv end*/
